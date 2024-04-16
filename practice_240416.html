@@ -14,6 +14,35 @@
   <button class="i" onclick="
   alert('No not really!');
   ">is anyone here?</button>
+
+  <button class="i" onclick="
+alert('No not really!');
+">is anyone here?</button>
+  <br>
+
+  <button onclick="
+  console.log(`Cart Quanity: ${cartQ} `);
+  ">Show Quanity</button>
+
+  <button onclick="
+    cartQ = cartQ + 2;
+  console.log(`Cart Quanity: ${cartQ} `);
+  ">+2</button>
+
+  <button onclick="
+  cartQ = cartQ + 3;
+console.log(`Cart Quanity: ${cartQ} `);
+">+3</button>
+
+  <button onclick="
+  cartQ = 0;
+console.log(`Cart Quanity: ${cartQ} `);
+">reset cart</button>
+
+  <script>
+    let cartQ = 0;
+
+  </script>
 </body>
 
 </html>
