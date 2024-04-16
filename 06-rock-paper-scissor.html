@@ -21,6 +21,22 @@
         position: relative;
     }
 
+    .dolphin {
+        position: fixed;
+        right: 5%;
+        transform: scaleX(-1);
+        width: 60vw;
+    }
+
+    .d-text {
+        position: fixed;
+        right: 150px;
+        top: 300px;
+        font-family: 'Courier New', Courier, monospace;
+        color: red;
+    }
+
+
     .butt-1,
     .butt-2,
     .butt-3 {
@@ -75,6 +91,8 @@
 
     <div class="title">PLEASE CHOOSE YOUR OPTION</div>
     <div class="flex-b">
+        <img class="dolphin" src="img/dolphin.webp" alt="">
+        <div class="d-text">&#x2B24 don't mind me, I'm just a dolphin</div>
         <button class="butt-1" onclick="
     const randomNumber = Math.random();
 
