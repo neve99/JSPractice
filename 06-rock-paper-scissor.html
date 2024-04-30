@@ -2,99 +2,100 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissor</title>
-    <link rel="icon" href="img/dolphin.webp">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissor</title>
+  <link rel="icon" href="img/dolphin.webp">
 </head>
 
 <style>
-    .title {
-        font-family: Helvetica, Arial, sans-serif;
-        font-weight: 800;
-        width: 100%;
-        font-size: 6.5vw;
-        letter-spacing: -3px;
-        text-align: center;
-    }
+  .title {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    width: 100%;
+    font-size: 6.5vw;
+    letter-spacing: -3px;
+    text-align: center;
+  }
 
-    .title {
-        position: relative;
-    }
+  .title {
+    position: relative;
+  }
 
-    .dolphin {
-        position: fixed;
-        right: 5%;
-        transform: scaleX(-1);
-        width: 60vw;
-    }
+  .dolphin {
+    position: fixed;
+    right: 5%;
+    transform: scaleX(-1);
+    width: 60vw;
+  }
 
-    .d-text {
-        position: fixed;
-        right: 150px;
-        top: 300px;
-        font-family: 'Courier New', Courier, monospace;
-        color: red;
-    }
+  .d-text {
+    position: fixed;
+    right: 150px;
+    top: 300px;
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+  }
 
 
-    .butt-1,
-    .butt-2,
-    .butt-3 {
-        background-color: #fff;
-        border: 1px solid #000;
-        font-size: 40px;
-        font-family: Helvetica, Arial, sans-serif;
-        font-weight: 400;
-        padding: 30px;
-        position: fixed;
-        transition: 0.15s;
-    }
+  .butt-1,
+  .butt-2,
+  .butt-3 {
+    background-color: #fff;
+    border: 1px solid #000;
+    font-size: 40px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    padding: 30px;
+    position: fixed;
+    transition: 0.15s;
+    cursor: pointer;
+  }
 
-    .butt-1:hover,
-    .butt-2:hover,
-    .butt-3:hover {
-        padding: 300px;
-        background-color: red;
-        color: #fff;
-        border: 1px solid red;
-    }
+  .butt-1:hover,
+  .butt-2:hover,
+  .butt-3:hover {
+    padding: 300px;
+    background-color: red;
+    color: #fff;
+    border: 1px solid red;
+  }
 
-    .butt-1:active,
-    .butt-2:active,
-    .butt-3:active {
+  .butt-1:active,
+  .butt-2:active,
+  .butt-3:active {
 
-        background-color: white;
-        color: red;
-    }
+    background-color: white;
+    color: red;
+  }
 
-    .butt-1:active+body {
-        background-color: red;
-    }
+  .butt-1:active+body {
+    background-color: red;
+  }
 
-    .butt-1 {
-        top: 400px;
-        left: 200px;
-    }
+  .butt-1 {
+    top: 400px;
+    left: 200px;
+  }
 
-    .butt-2 {
-        top: 190px;
-        left: 50px;
-    }
+  .butt-2 {
+    top: 190px;
+    left: 50px;
+  }
 
-    .butt-3 {
-        bottom: 80px;
-        right: 200px;
-    }
+  .butt-3 {
+    bottom: 80px;
+    right: 200px;
+  }
 </style>
 
 <body>
 
-    <div class="title">PLEASE CHOOSE YOUR OPTION</div>
-    <div class="flex-b">
-        <img class="dolphin" src="img/dolphin.webp" alt="">
-        <div class="d-text">&#x2B24 don't mind me, I'm just a dolphin</div>
-        <button class="butt-1" onclick="
+  <div class="title">PLEASE CHOOSE YOUR OPTION</div>
+  <div class="flex-b">
+    <img class="dolphin" src="img/dolphin.webp" alt="">
+    <div class="d-text">&#x2B24 don't mind me, I'm just a dolphin</div>
+    <button class="butt-1" onclick="
     const randomNumber = Math.random();
 
     let computerMove = '';
@@ -110,12 +111,12 @@
         computerMove = 'Scissor';
         result = 'You win';
     }
-
+    
     alert(`You picked Rock, computer picked ${computerMove}. ${result}.`);
     ">Rock</button>
 
 
-        <button class="butt-2" onclick="
+    <button class="butt-2" onclick="
     const randomNumber = Math.random();
 
     let computerMove = '';
@@ -136,7 +137,7 @@
     ">Paper</button>
 
 
-        <button class="butt-3" onclick="
+    <button class="butt-3" onclick="
     const randomNumber = Math.random();
 
     let computerMove = '';
@@ -155,7 +156,7 @@
 
     alert(`You picked Scissor, computer picked ${computerMove}. ${result}.`);
     ">Scissor</button>
-    </div>
+  </div>
 </body>
 
 </html>
