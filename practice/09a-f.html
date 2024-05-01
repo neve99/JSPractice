@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9a</title>
+</head>
+
+<body>
+  <button>9a</button>
+  <button class="change9b" onclick="changeText()">9b</button>
+  <br><br><br>
+  <button class="heads" onclick="playerChoose('heads')">heads</button>
+  <button class="tails" onclick="playerChoose('tails')">tails</button>
+  <p class="choiceDisplay"></p>
+
+  <!-- 9d-f -->
+  <input type="text" class="nameInput" onkeypress="enterRespond(event)">
+  <button class="submit" onclick="displayName()">Submit</button>
+  <p class="js-your-name"></p>
+
+  <!-- 9g -->
+
+
+
+
+
+  <script>
+    function changeText() {
+      document.querySelector('.change9b').innerHTML = '9b Done!'
+    }
+    function playerChoose(choice) {
+      document.querySelector('.choiceDisplay').innerHTML = 'You chose: ' + choice;
+    }
+
+    function displayName() {
+      const nameElem = document.querySelector('.nameInput');
+      console.log(nameElem.value);
+      document.querySelector('.js-your-name').textContent = 'Your name is: ' + nameElem.value;
+    };
+    function enterRespond(event) {
+      if (event.key === 'Enter') { displayName() }
+    }
+
+  </script>
+
+</body>
+
+</html>
