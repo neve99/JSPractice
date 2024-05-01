@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08-exercise</title>
+</head>
+
+<body>
+
+
+  <script>
+    const product = {
+      name: 'basketball',
+      price: 2095
+    }
+
+    console.log(product);
+
+    product.price += 500;
+    console.log(product.price);
+    product['deliveryTime'] = '3 days';
+    console.log(product);
+    function compareProducts(product1, product2) {
+      return product1.price < product2.price ? product1 : product2;
+    }
+    const product2 = {
+      name: 'basketball',
+      price: 2395
+    }
+
+    console.log(compareProducts(product, product2));
+
+    function isSame(p1, p2) {
+      return JSON.stringify(p1) === JSON.stringify(p2);
+    }
+
+    console.log(isSame(product, product2));
+  </script>
+</body>
+
+</html>
