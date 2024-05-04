@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //log everything in an array
+    const todoList = ['make a point',
+      'make bed',
+      'sleep early']
+
+    for (let i = 0; i < todoList.length; i++) {
+      console.log(todoList[i]);
+    }
+
+    //accumulator pattern
+    const myArray = [1, 2, 5];
+    let accum = 0;
+    for (let i = 0; i < myArray.length; i++) {
+      let n = myArray[i];
+      accum += n;
+    }
+    console.log(accum);
+    //accumulator pattern double
+    let myArrayDouble = [];
+    for (let i = 0; i < myArray.length; i++) {
+      myArrayDouble[i] = myArray[i] * 2;
+    }
+    console.log(myArrayDouble);
+  </script>
+</body>
+
+</html>

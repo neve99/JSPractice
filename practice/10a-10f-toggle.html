@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10a</title>
+
+  <style>
+    .btn {
+      font-size: 16px;
+      padding: 10px 25px;
+      border: none;
+      background-color: rgb(255, 216, 20);
+      border-radius: 20px;
+    }
+
+    .btn-gaming,
+    .btn-music,
+    .btn-tech {
+      font-size: 16px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      margin: 5px;
+    }
+
+    .is-toggled {
+      background-color: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="btn js-btn">Add to Cart</button>
+  <p></p>
+  <!-- 10f -->
+  <button class="btn-gaming is-toggled" onclick="toggle('.btn-gaming')">Gaming</button>
+  <button class="btn-music" onclick="toggle('.btn-music')">Music</button>
+  <button class="btn-tech" onclick="toggle('.btn-tech')">Tech</button>
+
+  <script>
+    console.log(document.querySelector('.js-btn').classList.contains('btn'));
+
+    //10f
+
+    function toggle(selector) {
+
+      const btnGamingElem = document.querySelector(selector);
+      if (btnGamingElem.classList.contains('is-toggled')) {
+        btnGamingElem.classList.remove('is-toggled');
+      } else {
+        //remove former toggle first, then add selector later
+        disableFormerToggle();
+        btnGamingElem.classList.add('is-toggled');
+
+      }
+    }
+
+    function disableFormerToggle() {
+      const toggleElem = document.querySelector('.is-toggled');
+      if (toggleElem) {
+        toggleElem.classList.remove('is-toggled');
+      }
+    }
+
+
+
+
+  </script>
+</body>
+
+</html>
